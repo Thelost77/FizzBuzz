@@ -14,9 +14,20 @@ namespace FizzBuzzGame
             var fizzBuzz = new FizzBuzz();
             while(maybeOneMoreTime != "n")
             {
-                fizzBuzz.Game();
-                Console.WriteLine("\nJeśli chcesz spróbować jeszcze raz wciśnij dowolny przycisk.\nJeśli chcesz wyjść wpisz 'n'.\n");
-                maybeOneMoreTime = Console.ReadLine();
+                Console.WriteLine("\nWitaj, w grze FizzBuzz. Podaj mi proszę liczbę całkowitą, a ja sprawdzę jej podzielność.\nJeżeli będzie podzielna przez 3 wyświetlę komunikat 'fizz', jeżeli będzie podzielna przez 5 wyświetlę komunikat 'Buzz', natomiast jeśli będzie jednocześnie podzielna przez 3 i 5 wyświetlę komunikat 'FizzBuzz'.\nJeżeli nie będzie podzielna przez żadne z powyższych, zwrócę Ci liczbę. \n");
+
+                if (!int.TryParse(Console.ReadLine(), out int givenNumber))
+                {
+                    Console.WriteLine("\nPodałeś błędne dane, podaj liczbę całkowitą!\n");
+                    continue;
+                }
+                else
+                {
+                    fizzBuzz.Game(givenNumber);
+                    Console.WriteLine("\nJeśli chcesz spróbować jeszcze raz wciśnij dowolny przycisk.\nJeśli chcesz wyjść wpisz 'n'.\n");
+                    maybeOneMoreTime = Console.ReadLine();
+                }
+
             }
             
             
