@@ -23,7 +23,7 @@ namespace FizzBuzzGame
                 }
                 else
                 {
-                    fizzBuzz.Game(givenNumber);
+                    Console.WriteLine("\n" + fizzBuzz.Game(givenNumber) + "\n");
                     Console.WriteLine("\nJeśli chcesz spróbować jeszcze raz wciśnij dowolny przycisk.\nJeśli chcesz wyjść wpisz 'n'.\n");
                     maybeOneMoreTime = Console.ReadLine();
                 }
